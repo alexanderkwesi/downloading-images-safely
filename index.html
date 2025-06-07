@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finding Safe Images Online - Guide for Kids & Teens</title>
+    <style>
+        :root {
+            --primary: #4361ee;
+            --secondary: #3f37c9;
+            --accent: #4895ef;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --success: #4cc9f0;
+            --warning: #f72585;
+        }
+        
+        body {
+            font-family: 'Comic', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            margin: 0;
+            padding: 0;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        h1 {
+            color: var(--primary);
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        h2 {
+            color: var(--secondary);
+            border-bottom: 3px solid var(--accent);
+            padding-bottom: 10px;
+            margin-top: 40px;
+            font-size: 1.8rem;
+        }
+        
+        .step {
+            background: #f8faff;
+            border-left: 5px solid var(--accent);
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 15px 15px 0;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .step:hover {
+            background: #eef2ff;
+            transform: translateX(5px);
+        }
+        
+        .step-number {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            width: 35px;
+            height: 35px;
+            text-align: center;
+            line-height: 35px;
+            border-radius: 50%;
+            margin-right: 15px;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .resource-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            transition: transform 0.3s ease;
+            border: 2px solid #e9ecef;
+        }
+        
+        .resource-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            border-color: var(--accent);
+        }
+        
+        .resource-icon {
+            font-size: 2.5rem;
+            margin-right: 20px;
+            color: var(--primary);
+            min-width: 60px;
+            text-align: center;
+        }
+        
+        .resource-content {
+            flex: 1;
+        }
+        
+        .resource-title {
+            color: var(--secondary);
+            margin: 0 0 10px 0;
+            font-size: 1.3rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 10px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        
+        .btn:hover {
+            background: var(--secondary);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .safety-tips {
+            background: #fff3f7;
+            border-left: 5px solid var(--warning);
+            padding: 20px;
+            border-radius: 0 15px 15px 0;
+            margin: 30px 0;
+        }
+        
+        .safety-title {
+            color: var(--warning);
+            font-weight: bold;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            font-size: 1.3rem;
+        }
+        
+        .safety-title:before {
+            content: "⚠️";
+            margin-right: 10px;
+        }
+        
+        .search-demo {
+            background: #e6f7ff;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 25px 0;
+            text-align: center;
+        }
+        
+        #search-input {
+            padding: 12px 20px;
+            border-radius: 50px;
+            border: 2px solid #ced4da;
+            width: 70%;
+            font-size: 1rem;
+            margin-right: 10px;
+        }
+        
+        #search-btn {
+            padding: 12px 25px;
+        }
+        
+        #search-results {
+            display: none;
+            margin-top: 20px;
+            text-align: left;
+        }
+        
+        .result-item {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+        
+        .highlight {
+            background-color: #fffacd;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🌍 Finding Safe Images Online</h1>
+        <p style="text-align: center; font-size: 1.2rem;">A friendly guide for kids and teens to find royalty-free images for school projects and creative work</p>
+        
+        <div class="step">
+            <span class="step-number">1</span>
+            <strong>Understand Copyright Rules</strong>
+            <p>Not all images online are free to use. Look for ones labeled:</p>
+            <ul>
+                <li><span class="highlight">Royalty-free</span> - No payment needed to use them</li>
+                <li><span class="highlight">Creative Commons</span> - Usually free with some rules</li>
+                <li><span class="highlight">Public Domain</span> - Free for anyone to use</li>
+            </ul>
+        </div>
+        
+        <div class="step">
+            <span class="step-number">2</span>
+            <strong>Use Safe Search Features</strong>
+            <p>Many search engines and websites have special filters:</p>
+            <ul>
+                <li>Turn on "Safe Search" in Google or Bing</li>
+                <li>Look for "Filter" options on image sites</li>
+                <li>Use websites made especially for kids</li>
+            </ul>
+        </div>
+        
+        <h2>⭐ Best Websites for Royalty-Free Images</h2>
+        
+        <div class="resource-card">
+            <div class="resource-icon">🖼️</div>
+            <div class="resource-content">
+                <h3 class="resource-title">Pixabay</h3>
+                <p>Over 2 million free images, photos, and videos. No attribution required (but appreciated!). Great for all types of projects.</p>
+                <a href="https://pixabay.com/" target="_blank" class="btn">Visit Pixabay</a>
+            </div>
+        </div>
+        
+        <div class="resource-card">
+            <div class="resource-icon">🎨</div>
+            <div class="resource-content">
+                <h3 class="resource-title">Pexels</h3>
+                <p>Beautiful free stock photos shared by talented photographers. Easy to search with kid-friendly filters.</p>
+                <a href="https://www.pexels.com/" target="_blank" class="btn">Visit Pexels</a>
+            </div>
+        </div>
+        
+        <div class="resource-card">
+            <div class="resource-icon">🖌️</div>
+            <div class="resource-content">
+                <h3 class="resource-title">OpenClipart</h3>
+                <p>Free clipart images perfect for school projects. All images are public domain with simple cartoon-style drawings.</p>
+                <a href="https://openclipart.org/" target="_blank" class="btn">Visit OpenClipart</a>
+            </div>
+        </div>
+        
+        <div class="safety-tips">
+            <div class="safety-title">Internet Safety Tips</div>
+            <ul>
+                <li>Always ask a parent/teacher if unsure about a website</li>
+                <li>Never share personal information online</li>
+                <li>Stick to the recommended websites in this guide</li>
+                <li>If you see something inappropriate, tell an adult immediately</li>
+            </ul>
+        </div>
+        
+        <div class="search-demo">
+            <h3>Try a Safe Image Search</h3>
+            <p>Practice searching for images with our demo tool:</p>
+            <input type="text" id="search-input" placeholder="Search for images (e.g., cats, space, sports)">
+            <button id="search-btn" class="btn">Search</button>
+            
+            <div id="search-results">
+                <h4>Search Results for "<span id="search-term"></span>"</h4>
+                <div class="result-item">
+                    <strong>Happy Cat Playing</strong> - Royalty-free image from Pixabay
+                </div>
+                <div class="result-item">
+                    <strong>Cute Kitten Illustration</strong> - Public domain clipart from OpenClipart
+                </div>
+                <div class="result-item">
+                    <strong>Cat Portrait Photo</strong> - Free stock photo from Pexels
+                </div>
+                <p style="margin-top: 15px; font-style: italic;">Remember: These are example results. Visit the real websites to find actual images!</p>
+            </div>
+        </div>
+        
+        <div class="step">
+            <span class="step-number">3</span>
+            <strong>Downloading and Using Images</strong>
+            <p>When you find an image you like:</p>
+            <ol>
+                <li>Click the "Download" button (usually near the image)</li>
+                <li>Choose a size (medium is good for most projects)</li>
+                <li>Save to your computer in a folder you'll remember</li>
+                <li>Check if you need to credit the creator (some sites require this)</li>
+            </ol>
+        </div>
+        
+        <footer>
+            <p>Made with ❤️ for young digital creators | Always be safe online</p>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('search-btn').addEventListener('click', function() {
+            const searchTerm = document.getElementById('search-input').value.trim();
+            
+            if (searchTerm) {
+                document.getElementById('search-term').textContent = searchTerm;
+                document.getElementById('search-results').style.display = 'block';
+                
+                // Scroll to results
+                document.getElementById('search-results').scrollIntoView({
+                    behavior: 'smooth'
+                });
+            } else {
+                alert('Please enter something to search for!');
+            }
+        });
+        
+        // Allow pressing Enter to search
+        document.getElementById('search-input').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                document.getElementById('search-btn').click();
+            }
+        });
+    </script>
+</body>
+</html>
